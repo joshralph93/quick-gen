@@ -1,0 +1,26 @@
+<?php
+
+namespace <<baseNamespace>>\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+/**
+ * Class <<name.studly>>
+ *
+ * @package <<baseNamespace>>\Models
+ */
+class <<name.studly>> extends Model
+{
+    use SoftDeletes;
+
+
+    /**
+     * Fillable fields
+     *
+     * @var array
+     */
+    protected $fillable = [
+        //
+    ];
+}

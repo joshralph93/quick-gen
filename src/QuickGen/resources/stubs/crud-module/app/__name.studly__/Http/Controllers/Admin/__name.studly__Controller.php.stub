@@ -1,0 +1,21 @@
+<?php
+
+namespace <<baseNamespace>>\<<name.studly>>\Http\Controllers\Admin;
+
+use App\Http\Controllers\Controller;
+
+/**
+ * Class <<name.studly>>Controller
+ *
+ * @package <<baseNamespace>>\<<name.studly>>\Http\Controllers\Admin
+ */
+class <<name.studly>>Controller extends Controller
+{
+    /**
+     * <<name.studly>>Controller construct
+     */
+    public function __construct()
+    {
+        //
+    }
+}
