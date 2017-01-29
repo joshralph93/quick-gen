@@ -2,11 +2,16 @@
     <tr>
         <th>ID</th>
         <th>Name</th>
+        <th></th>
     </tr>
     @foreach ($<<name.plural.camel>> as $<<name.singular.camel>>)
         <tr>
             <td>{{ $<<name.singular.camel>>->getKey() }}</td>
             <td>{{ $<<name.singular.camel>>->name }}</td>
+            <td>
+                <a href="{{ route('<<name.singular.snake>>.edit', $<<name.singular.camel>>->id) }}" class="btn btn-default btn-sm">Edit</a>
+                <a href="{{ route('<<name.singular.snake>>.destroy', $<<name.singular.camel>>->id) }}" class="btn btn-default btn-sm">Delete</a>
+            </td>
         </tr>
     @endforeach
 </table>

@@ -119,3 +119,16 @@ The following filters are available:
 ```ucwords``` - upper case the first letter of each word in the variable (see ```words```).
 
 ```words``` - convert the variable to space delimited words
+
+# Limitations
+
+- The default template doesn't currently update routes files. These will need to be mapped manually:
+
+| Verb | Name                          | Method        |
+|------|-------------------------------|---------------|
+| GET  | <<name.snake.plural>>.index   | @index        |
+| GET  | <<name.snake.plural>>.create  | @create       |
+| POST | <<name.snake.plural>>.store   | @store        |
+| GET  | <<name.snake.plural>>.edit    | @edit($id)    |
+| POST | <<name.snake.plural>>.update  | @update($id)  |
+| GET  | <<name.snake.plural>>.destroy | @destroy($id) |
