@@ -8,7 +8,7 @@ Contribution welcome.
 
 Pull in the package using composer
 
-    $ composer require joshralph/quick-gen
+    $ composer require joshralph/quick-gen "dev-master" --dev
     
     
 Include the service provider within ```/config/app.php```

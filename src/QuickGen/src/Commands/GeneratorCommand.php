@@ -68,7 +68,7 @@ class GeneratorCommand extends Command
         $this->config = config('quick-gen');
         $this->config = array_merge($this->config, [
             'resource_name' => str_singular($this->argument('name')),
-            'stub_path'     => rtrim($this->config['stub_path'], '/') . '/' . $this->option('stub') . '/'
+            'stub_path'     => rtrim($this->config['stub_path'], '/') . '/' . $this->option('template') . '/'
         ]);
 
         // Check the specified stub exists
