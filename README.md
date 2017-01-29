@@ -34,15 +34,11 @@ php artisan quick-gen:generate cars
 
 # Templates
 
-The package ships with a couple of standard templates that you can use to generate basic crud functionality.
+The package ships with a standard CRUD template that you can use to generate basic CRUD functionality.
 
 To specify which template you wish to use, add the template flag to the command.
 
-```
-php artisan quick-gen:generate cars --template=crud-module
-```
-
-### crud
+### crud (default)
 This template will generate the following files for you within the standard laravel directory structure:
 
 - Controller
@@ -55,17 +51,18 @@ This template will generate the following files for you within the standard lara
     - partials/form.blade.php
     
     
-### crud-module
-The only difference with this template, is that your namespaced files (as above) will be placed into a new folder within the ```app``` directory.
-
-e.g. ```app/YourModuleName/Http/Controllers```...
-
-
 ## Custom Templates
 
 Of course you will likely want to create your own template files that are in keeping with your current view structure, and coding style.
 
 To create a new template simply create a new folder within the ```resources/stubs/``` directory. **The folder name should be used when setting the  ```--template``` argument.**
+
+
+You can then call the command below using the ```--template``` argument
+
+```
+php artisan quick-gen:generate cars --template=my-template
+```
 
 ### Stub Syntax
 
