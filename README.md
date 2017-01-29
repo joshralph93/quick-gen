@@ -126,9 +126,9 @@ The following filters are available:
 
 | Verb | Name                          | Method        |
 |------|-------------------------------|---------------|
-| GET  | <<name.snake.plural>>.index   | @index        |
-| GET  | <<name.snake.plural>>.create  | @create       |
-| POST | <<name.snake.plural>>.store   | @store        |
-| GET  | <<name.snake.plural>>.edit    | @edit($id)    |
-| POST | <<name.snake.plural>>.update  | @update($id)  |
-| GET  | <<name.snake.plural>>.destroy | @destroy($id) |
+| GET  | \<\<name.snake.plural\>\>.index   | @index        |
+| GET  | \<\<name.snake.plural\>\>.create  | @create       |
+| POST | \<\<name.snake.plural\>\>.store   | @store        |
+| GET  | \<\<name.snake.plural\>\>.edit    | @edit($id)    |
+| POST | \<\<name.snake.plural\>\>.update  | @update($id)  |
+| GET  | \<\<name.snake.plural\>\>.destroy | @destroy($id) |
