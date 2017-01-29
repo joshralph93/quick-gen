@@ -1,0 +1,116 @@
+<?php
+
+namespace <<baseNamespace>>\Http\Controllers;
+
+use <<baseNamespace>>\Http\Controllers\Controller;
+use <<baseNamespace>>\Models\<<name.studly>>;
+
+/**
+ * Class <<name.studly>>Controller
+ *
+ * @package <<baseNamespace>>\Http\Controllers
+ */
+class <<name.studly>>Controller extends Controller
+{
+    /**
+     * @var <<name.studly>>
+     */
+    protected $<<name.camel>>;
+
+
+    /**
+     * <<name.studly>>Controller construct
+     *
+     * @param <<name.studly>> $<<name.camel>>
+     */
+    public function __construct(<<name.studly>> $<<name.camel>>)
+    {
+        $this-><<name.camel>> = $<<name.camel>>;
+    }
+
+    /**
+     * Index view
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index()
+    {
+        $<<name.camel.plural>> = $this-><<name.camel>>->all();
+
+        return view('<<name.camel.plural>>.index', compact('<<name.camel.plural>>'));
+    }
+
+    /**
+     * Create view
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function create()
+    {
+        $<<name.camel>> = $this-><<name.camel>>;
+
+        return view('<<name.camel.plural>>.create', compact('<<name.camel>>'));
+    }
+
+    /**
+     * Store method
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store()
+    {
+        $<<name.camel>> = $this-><<name.camel>>->create(
+            request()->only('name')
+        );
+
+        return redirect()->route('<<name.camel.plural>>.edit', $<<name.camel>>->id);
+    }
+
+    /**
+     * Edit view
+     *
+     * @param $<<name.camel>>Id
+     *
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function edit($<<name.camel>>Id)
+    {
+        $<<name.camel>> = $this-><<name.camel>>->findOrFail($<<name.camel>>Id);
+
+        return view('<<name.camel.plural>>.edit', compact('<<name.camel>>'));
+    }
+
+    /**
+     * Update method
+     *
+     * @param $<<name.camel>>Id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update($<<name.camel>>Id)
+    {
+        $<<name.camel>> = $this-><<name.camel>>->findOrFail($<<name.camel>>Id);
+
+        $<<name.camel>>->update(
+            request()->only('name')
+        );
+
+        return redirect()->route('<<name.camel.plural>>.edit', $<<name.camel>>->id);
+    }
+
+    /**
+     * Delete method
+     *
+     * @param $<<name.camel>>Id
+     *
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function destroy($<<name.camel>>Id)
+    {
+        $<<name.camel>> = $this-><<name.camel>>->findOrFail($<<name.camel>>Id);
+
+        $<<name.camel>>->delete();
+
+        return redirect()->route('<<name.camel.plural>>.index');
+    }
+}

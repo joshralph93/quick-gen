@@ -1,0 +1,4 @@
+<div class="form-group">
+    <label class="control-label">Name</label>
+    <input type="text" name="name" class="form-control" value="{{ old('name', $<<name.singular.camel>>->name) }}"/>
+</div>

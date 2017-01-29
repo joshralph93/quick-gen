@@ -141,7 +141,7 @@ class GeneratorCommand extends Command
             ['Template', $this->option('template')]
         ];
 
-        foreach (array_except($this->config, ['output_directories']) as $key => $value) {
+        foreach (array_except($this->config, ['output_directories', 'stub_path']) as $key => $value) {
             $rows[] = [
                 ucwords(str_replace('_', ' ', $key)),
                 $value

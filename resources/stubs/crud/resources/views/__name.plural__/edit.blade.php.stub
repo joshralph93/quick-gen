@@ -1,0 +1,17 @@
+@extends('layouts.app')
+
+@section('main')
+
+    <h1>Edit <<name.singular.words.ucfirst>></h1>
+
+    <form method="POST" action="{{ route('<<name.plural.snake>>.update', $<<name.singular.camel>>->id) }}">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Details</div>
+            <div class="panel-body">
+                @include('<<name.plural>>.partials.form')
+            </div>
+        </div>
+
+    </form>
+@stop

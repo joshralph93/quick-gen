@@ -1,0 +1,9 @@
+@extends('layouts.app')
+
+@section('main')
+
+    <h1><<name.plural.words.ucfirst>></h1>
+
+    @include('<<name.plural>>.partials.list')
+
+@stop
