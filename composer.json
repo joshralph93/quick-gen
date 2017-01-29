@@ -1,12 +1,16 @@
 {
     "name": "joshralph/quick-gen",
     "description": "A laravel generators package.",
-    "type": "composer-plugin",
     "authors": [
         {
             "name": "Josh Ralph",
             "email": "joshralph93@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "QuickGen\\": "src/QuickGen/"
+        }
+    },
     "require": {}
 }
