@@ -6,8 +6,9 @@
 
     <table class="table table-striped">
         @foreach ($<<name.camel.plural>> as $<<name.camel.singular>>)
-            <td>{{ $<<name.camel.singular>>->getKey() }}</td>
-            <td><a href="" class="btn btn-default btn-sm">Edit</a></td>
+            <tr>
+                <td>{{ $<<name.camel.singular>>->getKey() }}</td>
+            </tr>
         @endforeach
     </table>
 

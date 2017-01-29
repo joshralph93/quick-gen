@@ -68,6 +68,9 @@ Of course you will likely want to create your own template files that are in kee
 To create a new template simply create a new folder within the ```resources/stubs/``` directory. **The folder name should be used when setting the  ```--template``` argument.**
 
 ### Stub Syntax
+
+Note all stub files should end in ```.stub```
+
 #### Variables
 
 The following variables are made available to stub files (both content and filename):
@@ -98,6 +101,10 @@ Filters can be added to variables using a ```.``` delimiter.
 
 ```blade
 @foreach ($<<name.camel.plural>> as $<<name.camel.singular>>)
+    <tr>
+        <td>{{ $<<name.camel.singular>>->name }}</td>
+    </tr>
+@endforeach
 ```
 
 The following filters are available:
