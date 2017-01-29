@@ -2,7 +2,7 @@
 
 @section('main')
 
-    <h1><<name.plural.words.ucfirst>></h1>
+    <h1><<name.plural.words.ucwords>></h1>
 
     @include('<<name.plural>>.partials.list')
 

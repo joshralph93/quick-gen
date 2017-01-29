@@ -2,7 +2,7 @@
 
 @section('main')
 
-    <h1>Edit <<name.singular.words.ucfirst>></h1>
+    <h1>Edit <<name.singular.words.ucwords>></h1>
 
     <form method="POST" action="{{ route('<<name.plural.snake>>.update', $<<name.singular.camel>>->id) }}">
 
