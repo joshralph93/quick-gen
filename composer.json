@@ -9,7 +9,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "QuickGen\\": "src/QuickGen/"
+            "QuickGen\\": "src/"
         }
     },
     "require": {}
