@@ -19,7 +19,7 @@ class GeneratorCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'generate:crud {name} {--stub=crud}';
+    protected $signature = 'quick-gen:generate {name} {--template=crud}';
 
     /**
      * The console command description.
@@ -73,7 +73,7 @@ class GeneratorCommand extends Command
 
         // Check the specified stub exists
         if (!\File::isDirectory($this->config['stub_path'])) {
-            $this->error("No stub structure with the name '{$this->option('stub')}' found.");
+            $this->error("No stub structure with the name '{$this->option('template')}' found.");
             return;
         }
 
@@ -138,7 +138,7 @@ class GeneratorCommand extends Command
         $this->config['base_namespace'] = $this->ask('Base namespace to generate into', $this->config['base_namespace']);
 
         $rows = [
-            ['Stub', $this->option('stub')]
+            ['Template', $this->option('template')]
         ];
 
         foreach (array_except($this->config, ['output_directories']) as $key => $value) {
