@@ -78,7 +78,7 @@ class Variable
      */
     public function lower()
     {
-        $value = strtolower($value);
+        $value = strtolower($this->value);
 
         return new static($value);
     }
