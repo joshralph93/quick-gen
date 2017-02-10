@@ -116,6 +116,8 @@ The following filters are available:
 
 ```singular``` - convert the variable to singular.
 
+```lower``` - convert the variable to lowercase.
+
 ```ucwords``` - upper case the first letter of each word in the variable (see ```words```).
 
 ```words``` - convert the variable to space delimited words

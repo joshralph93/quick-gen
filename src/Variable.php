@@ -70,7 +70,19 @@ class Variable
 
         return new static($value);
     }
+    
+    /**
+     * Convert string to lowercase
+     *
+     * @return static
+     */
+    public function lower()
+    {
+        $value = strtolower($value);
 
+        return new static($value);
+    }
+    
     /**
      * Upper case first letters
      *
